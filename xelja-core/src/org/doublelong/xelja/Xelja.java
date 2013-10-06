@@ -1,8 +1,20 @@
 package org.doublelong.xelja;
 
-public class Xelja
+import org.doublelong.xelja.screens.LoadingScreen;
+
+import com.badlogic.gdx.Game;
+
+
+public class Xelja extends Game
 {
-	public static final float WINDOW_HEIGHT = 800;
-	public static final float WINDOW_WIDTH = 800;
-	public static final String WINDOW_TITLE = "Xelja - the adventure";
+	public final int WINDOW_HEIGHT = 800;
+	public final int WINDOW_WIDTH = 800;
+	public final String WINDOW_TITLE = "Xel"
+			+ "ja - the adventure";
+	@Override
+	public void create()
+	{
+		this.setScreen(new LoadingScreen(this));
+	}
+
 }
